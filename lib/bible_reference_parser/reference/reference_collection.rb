@@ -52,8 +52,7 @@ module BibleReferenceParser
     # Initialization
     #----------------------------------------------------------------------------
     
-    def initialize(initial_references = [], initial_invalid_references = [])
-      super 
+    def initialize(initial_references = [], initial_invalid_references = []) 
                       
       # Array of reference objects this collection contains
       @references = initial_references

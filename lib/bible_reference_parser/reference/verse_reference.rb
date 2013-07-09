@@ -53,7 +53,6 @@ module BibleReferenceParser
     # chapter_number  - The chapter number this verse is for. Used to validate the verse number exists for a
     #                   book and chapter. 
     def initialize(number, metadata = nil, chapter_number = nil)
-      super
       
       number = number.to_i # allows passing the number parameter as string
       

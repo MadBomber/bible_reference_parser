@@ -61,7 +61,6 @@ module BibleReferenceParser
     #                 book, ex. BibleMetadata["Genesis"]. This is used to check if
     #                 the chapter number is valid for a book.
     def initialize(number, raw_content = nil, metadata = nil)
-      super
                    
       number = number.to_i # allows passing the number parameter as string
       
