@@ -43,7 +43,7 @@ module BibleReferenceParser
   #     chapters.first.errors # => ["The verse '1000' does not exist for Genesis 1"]
   
   class ChapterReference 
-    include TracksErrors
+    include TracksErrors  # TDV: was extend
     
     attr_reader :number, :raw_content, :verse_references, :metadata 
     
@@ -61,7 +61,9 @@ module BibleReferenceParser
     #                 book, ex. BibleMetadata["Genesis"]. This is used to check if
     #                 the chapter number is valid for a book.
     def initialize(number, raw_content = nil, metadata = nil)
-                   
+
+      super
+
       number = number.to_i # allows passing the number parameter as string
       
       # if number is less than 1 add a parsing error and stop processing

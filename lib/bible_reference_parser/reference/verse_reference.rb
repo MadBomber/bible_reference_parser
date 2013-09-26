@@ -54,6 +54,8 @@ module BibleReferenceParser
     #                   book and chapter. 
     def initialize(number, metadata = nil, chapter_number = nil)
       
+      super
+
       number = number.to_i # allows passing the number parameter as string
       
       # if number is less than 1 add a parsing error and stop processing

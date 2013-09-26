@@ -8,7 +8,7 @@ describe BibleMetadata do
   end
   
   it "should have valid abbreviations" do
-    BibleMetadata.metadata.any? {|book| book[1].is_a?(Syck::BadAlias) }.should_not be_true
+    BibleMetadata.metadata.any? {|book| book[1].is_a?(Hash) }.should be_true
   end
   
   it "should find the correct book for an all lower-cased name" do

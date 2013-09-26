@@ -49,7 +49,9 @@ module BibleReferenceParser
     # book_name   - can be either the full name or the abbreviation.
     # raw_content - the raw string of chapters/verses selected for this book reference (ex. "1:1-10").                    
     def initialize(book_name, raw_content = nil)
-            
+
+      super
+
       # get the metadata for the given book name
       @metadata = BibleMetadata[book_name]
       

@@ -7,14 +7,13 @@ module BibleReferenceParser
   module TracksErrors
  
     def initialize(*args, &block) 
-      super
-   
       # A collection of error messages.                         
       @errors = []
     end
  
     # Add an error message.
     def add_error(message)
+      @errors = [] if @errors.nil?  # TDV: why was this not initialized?
       @errors << message
     end 
     
