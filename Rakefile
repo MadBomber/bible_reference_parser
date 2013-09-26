@@ -1,10 +1,9 @@
-require 'rubygems'
 require 'bundler'
 Bundler.setup
 
 require 'rake'
 require 'rspec/core/rake_task'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 begin
   require 'jeweler'
